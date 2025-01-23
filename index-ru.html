@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Tour - Международные пассажирские перевозки</title>
+    <meta name="description" content="Nova Tour предлагает международные пассажирские и грузовые перевозки из Молдовы в Европу. Безопасные и комфортные поездки на современных микроавтобусах.">
+    <meta name="keywords" content="транспорт Молдова, транспорт Европа, пассажирские перевозки, грузовые перевозки, Nova Tour">
+    <link rel="canonical" href="https://www.novatour.md/index-ru.html">
+    <meta name="robots" content="index, follow">
+
+    <!-- Preload для шрифтов -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <!-- Preload для CSS -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+
+
+    <!-- Preload для изображений -->
+    <link rel="preload" href="img/logo.png" as="image">
+
+    <!-- Preload для видео -->
+    <link rel="preload" href="video/video-cover.webm" as="video" type="video/webm">
+    <link rel="preload" href="video/video-cover.mp4" as="video" type="video/mp4">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Nova Tour - Международные пассажирские перевозки">
+    <meta property="og:description" content="Nova Tour предлагает международные пассажирские и грузовые перевозки из Молдовы в Европу. Безопасные и комфортные поездки на современных микроавтобусах.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.novatour.md/index-ru.html">
+    <meta property="og:image" content="https://www.novatour.md/img/logo.png">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nova Tour - Международные пассажирские перевозки">
+    <meta name="twitter:description" content="Nova Tour предлагает международные пассажирские и грузовые перевозки из Молдовы в Европу. Безопасные и комфортные поездки на современных микроавтобусах.">
+    <meta name="twitter:image" content="https://www.novatour.md/img/logo.png">
+
+    <!-- Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="alternate" href="https://www.novatour.md/index-ru.html" hreflang="ru" />
+    <link rel="icon" href="https://www.novatour.md/img/new-logo.svg" type="image/svg+xml">
+    <link rel="icon" href="https://www.novatour.md/img/new-logo.ico" sizes="16x16 32x32 48x48 64x64 128x128" type="image/x-icon">
+
+    <!-- Pentru iOS Splash Screen -->
+    <link rel="apple-touch-icon" href="https://www.novatour.md/img/logo-ico.png">
+    <link rel="apple-touch-startup-image" href="https://www.novatour.md/img/logo-ico.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+</head>
+<body>
+    <!-- Динамическая кнопка -->
+    <div class="floating-contact">
+        <a href="#" class="contact-icon phone" aria-label="Call" id="contact-phone">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="viber://chat?number=%2B37368399903" class="contact-icon viber" aria-label="Viber" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-viber"></i>
+        </a>
+        <a href="https://wa.me/37368399903" class="contact-icon whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://m.me/100064945602750" class="contact-icon messenger" aria-label="Messenger" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-messenger"></i>
+        </a>
+    </div>
+
+    <!-- Навигация -->
+    <nav>
+        <div class="logo">
+            <a href="index-ru.html">
+                <picture>
+                    <source srcset="img/logo.webp" type="image/webp">
+                    <img src="img/logo.png" alt="Логотип Nova Tour" class="logo-img" loading="lazy">
+                </picture>
+            </a>
+        </div>
+        <button class="hamburger" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="menu">
+            <a href="#servicii">Услуги</a>
+            <a href="#destinatii">Направления</a>
+            <a href="#avantaje">Преимущества</a>
+            <a href="#contact">Контакты</a>
+        </div>
+        <div class="language-selector">
+            <a href="index.html" class="language-link">RO</a>
+            <span>|</span>
+            <a href="index-ru.html" class="language-link">RU</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section с видео -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="video/video-cover.mp4" type="video/mp4">
+            <source src="video/video-cover.webm" type="video/webm">          
+            Ваш браузер не поддерживает видео.
+        </video>
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Путешествуйте по Европе с Nova Tour</h1>
+                <p>Удобные и безопасные рейсы из Молдовы в Европу</p>
+            </div>
+        </div>
+        <div class="flags-section">
+            <div class="flags-container">
+                <div class="flag-item">
+                    <div class="flag-icon">
+                        <picture>
+                            <source srcset="img/flags/flag-moldova.webp" type="image/webp">
+                            <img src="img/flags/flag-moldova.jpg" alt="Флаг Молдовы" loading="lazy">
+                        </picture>
+                    </div>
+                    <span class="flag-name">Молдова</span>
+                </div>
+                <div class="flag-divider">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-icon">
+                        <picture>
+                            <source srcset="img/flags/czechrepublic-flag.webp" type="image/webp">
+                            <img src="img/flags/czechrepublic-flag.jpg" alt="Флаг Чехии" loading="lazy">
+                        </picture>
+                    </div>
+                    <span class="flag-name">Чехия</span>
+                </div>
+                <div class="flag-divider">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-icon">
+                        <picture>
+                            <source srcset="img/flags/austria-flag.webp" type="image/webp">
+                            <img src="img/flags/austria-flag.jpg" alt="Флаг Австрии" loading="lazy">
+                        </picture>
+                    </div>
+                    <span class="flag-name">Австрия</span>
+                </div>
+                <div class="flag-divider">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-icon">
+                        <picture>
+                            <source srcset="img/flags/germany-flag.webp" type="image/webp">
+                            <img src="img/flags/germany-flag.jpg" alt="Флаг Германии" loading="lazy">
+                        </picture>
+                    </div>
+                    <span class="flag-name">Германия</span>
+                </div>
+                <div class="flag-divider">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-icon">
+                        <picture>
+                            <source srcset="img/flags/belgium-flag.webp" type="image/webp">
+                            <img src="img/flags/belgium-flag.jpg" alt="Флаг Бельгии" loading="lazy">
+                        </picture>
+                    </div>
+                    <span class="flag-name">Бельгия</span>
+                </div>
+                <div class="flag-divider">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-icon">
+                        <picture>
+                            <source srcset="img/flags/flag-netherlands.webp" type="image/webp">
+                            <img src="img/flags/flag-netherlands.jpg" alt="Флаг Нидерландов" loading="lazy">
+                        </picture>
+                    </div>
+                    <span class="flag-name">Нидерл.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Услуг -->
+    <section id="servicii" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наши Услуги</h2>
+                <p class="section-subtitle">Безопасные и комфортные поездки с Nova Tour</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Пассажирские Перевозки</h3>
+                    <p>Современные и комфортные микроавтобусы с бесплатным Wi-Fi и кондиционером.</p>
+                    <ul>
+                        <li>Ежедневные рейсы</li>
+                        <li>От адреса до адреса</li>
+                        <li>Профессиональные водители</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3>Грузовые Перевозки</h3>
+                    <p>Безопасная и быстрая доставка грузов по адресу получателя.</p>
+                    <ul>
+                        <li>Гарантированная доставка</li>
+                        <li>Максимальный приоритет</li>
+                        <li>Доступные цены</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mug-hot"></i>
+                    </div>
+                    <h3>Дополнительные Услуги</h3>
+                    <p>Путешествуйте с комфортом и бесплатными удобствами.</p>
+                    <ul>
+                        <li>Закуски и горячие напитки</li>
+                        <li>Wi-Fi и USB-розетки для устройств</li>
+                        <li>Эргономичные и регулируемые сиденья</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Доступные Цены</h3>
+                    <p>Мы предлагаем самые конкурентоспособные цены на международные пассажирские и грузовые перевозки.</p>
+                    <ul>
+                        <li>Без скрытых затрат</li>
+                        <li>Выгодные условия</li>
+                        <li>Прозрачные тарифы</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Направлений -->
+    <section id="destinatii" class="section destinations-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Направления</h2>
+                <p class="section-subtitle">Ежедневные перевозки в следующие европейские направления</p>
+            </div>
+            
+            <div class="destinations-wrapper">
+                <button class="nav-arrow nav-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="destinations-container">
+                    <div class="destinations-grid">
+                        <!-- Чехия -->
+                        <div class="destination-card">
+                            <div class="card-image">
+                                <picture>
+                                    <source srcset="img/destinations/cehia.webp" type="image/webp">
+                                    <img src="img/destinations/cehia.png" alt="Чехия" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="destination-info">
+                                <div class="destination-header">
+                                    <h3>Чехия</h3>
+                                </div>
+                                <div class="destination-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Отправление: Каждый день</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-road"></i>
+                                        <span>Продолжительность: ~19 часов</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Расстояние: ~1600 км</span>
+                                    </div>
+                                </div>
+                                <a href="viber://chat?number=%2B37368399903" class="book-button" aria-label="Viber" target="_blank" rel="noopener noreferrer">Забронировать сейчас</a>
+                            </div>
+                        </div>
+
+                        <!-- Австрия -->
+                        <div class="destination-card">
+                            <div class="card-image">
+                                <picture>
+                                    <source srcset="img/destinations/austria.webp" type="image/webp">
+                                    <img src="img/destinations/austria.png" alt="Австрия" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="destination-info">
+                                <div class="destination-header">
+                                    <h3>Австрия</h3>
+                                </div>
+                                <div class="destination-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Отправление: Каждый день</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-road"></i>
+                                        <span>Продолжительность: ~18 часов</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Расстояние: ~1500 км</span>
+                                    </div>
+                                </div>
+                                <a href="viber://chat?number=%2B37368399903" class="book-button" aria-label="Viber" target="_blank" rel="noopener noreferrer">Забронировать сейчас</a>
+                            </div>
+                        </div>
+
+                        <!-- Германия -->
+                        <div class="destination-card">
+                            <div class="card-image">
+                                <picture>
+                                    <source srcset="img/destinations/germany.webp" type="image/webp">
+                                    <img src="img/destinations/germany.png" alt="Германия" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="destination-info">
+                                <div class="destination-header">
+                                    <h3>Германия</h3>
+                                </div>
+                                <div class="destination-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Отправление: Каждый день</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-road"></i>
+                                        <span>Продолжительность: ~25 часов</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Расстояние: ~2100 км</span>
+                                    </div>
+                                </div>
+                                <a href="viber://chat?number=%2B37368399903" class="book-button" aria-label="Viber" target="_blank" rel="noopener noreferrer">Забронировать сейчас</a>
+                            </div>
+                        </div>
+
+                        <!-- Бельгия -->
+                        <div class="destination-card">
+                            <div class="card-image">
+                                <picture>
+                                    <source srcset="img/destinations/belgia.webp" type="image/webp">
+                                    <img src="img/destinations/belgia.png" alt="Бельгия" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="destination-info">
+                                <div class="destination-header">
+                                    <h3>Бельгия</h3>
+                                </div>
+                                <div class="destination-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Отправление: Каждый день</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-road"></i>
+                                        <span>Продолжительность: ~27 часов</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Расстояние: ~2500 км</span>
+                                    </div>
+                                </div>
+                                <a href="viber://chat?number=%2B37368399903" class="book-button" aria-label="Viber" target="_blank" rel="noopener noreferrer">Забронировать сейчас</a>
+                            </div>
+                        </div>
+
+                        <!-- Нидерланды -->
+                        <div class="destination-card">
+                            <div class="card-image">
+                                <picture>
+                                    <source srcset="img/destinations/olanda.webp" type="image/webp">
+                                    <img src="img/destinations/olanda.png" alt="Нидерланды" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="destination-info">
+                                <div class="destination-header">
+                                    <h3>Нидерланды</h3>
+                                </div>
+                                <div class="destination-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Отправление: Каждый день</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-road"></i>
+                                        <span>Продолжительность: ~28 часов</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Расстояние: ~2600 км</span>
+                                    </div>
+                                </div>
+                                <a href="viber://chat?number=%2B37368399903" class="book-button" aria-label="Viber" target="_blank" rel="noopener noreferrer">Забронировать сейчас</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destinations-controls">
+                        <div class="scroll-indicator">
+                            <div class="scroll-line">
+                                <div class="scroll-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="nav-arrow nav-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Преимуществ -->
+    <section id="avantaje" class="advantages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Почему стоит путешествовать с Nova Tour?</h2>
+                <p class="section-subtitle">Опыт, комфорт и безопасность на высшем уровне</p>
+            </div>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Гарантированная Безопасность</h3>
+                    <p>Современные транспортные средства и профессиональные водители с большим опытом международных перевозок</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Гибкий График</h3>
+                    <p>Регулярные рейсы и возможность выбрать дату и место, которые вам подходят</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Премиум Комфорт</h3>
+                    <p>Современные микроавтобусы с Wi-Fi, USB-розетками и удобными сиденьями для длительных поездок</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Поддержка 24/7</h3>
+                    <p>Посвященная команда, доступная круглосуточно для помощи и информации</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Множество Направлений</h3>
+                    <p>Прямые маршруты в самые популярные города Европы</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3>Персонализированные Услуги</h3>
+                    <p>Мы адаптируем наши услуги, чтобы удовлетворить потребности и предпочтения каждого клиента.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Контактов -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2>Свяжитесь с нами</h2>
+                <p>Мы доступны 24/7 для вашей помощи</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Левая часть - Карта -->
+                <div class="map-container">
+                    <picture>
+                        <source srcset="img/position.webp" type="image/webp">
+                        <img src="img/position.png" alt="Местоположение Nova Tour" class="europe-map" loading="lazy">
+                    </picture>
+                </div>
+
+                <!-- Правая часть - Контактная информация -->
+                <div class="contact-info-container">
+                    <!-- Основная карточка -->
+                    <div class="contact-main-card">
+                        <div class="card-header">
+                            <i class="fas fa-headset"></i>
+                            <h3>Клиентская поддержка 24/7</h3>
+                        </div>
+                        <div class="contact-numbers">
+                            <a href="tel:+37368399903" class="number-item primary">
+                                <span class="label">Основная Линия:</span>
+                                <span class="phone">+373 68 399 903</span>
+                            </a>
+                            <div class="number-item social-links">
+                                <span class="label">Дополнительные Контакты:</span>
+                                <div class="social-icons-contact">
+                                    <a href="viber://chat?number=%2B37368399903" class="social-icon viber" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-viber"></i>
+                                    </a>
+                                    <a href="https://wa.me/37368399903" class="social-icon whatsapp" target="_blank" rel="noopener noreferrer">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </a>
+                                    <a href="https://t.me/+37368399903" class="social-icon telegram" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-telegram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Второстепенные карточки -->
+                    <div class="contact-cards-grid">
+                        <div class="contact-card">
+                            <i class="fas fa-clock"></i>
+                            <h4>Рабочее время</h4>
+                            <p>Понедельник - Воскресенье</p>
+                            <p class="highlight">24/7</p>
+                        </div>
+
+                        <div class="contact-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h4>Центральный офис</h4>
+                            <p>ул. Альба-Юлия 73, Кишинев</p>
+                            <a href="https://maps.app.goo.gl/fGXh4ZrAcc2q3roe9" target="_blank" rel="noopener noreferrer"
+                               class="location-btn"
+                               onclick="openGoogleMaps(event, 47.035297340895966, 28.7751250349708)">
+                                Посмотреть
+                            </a>
+                        </div>
+
+                        <div class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <h4>Почта</h4>
+                            <a href="mailto:marian.belous@bk.ru" class="email-link">marian.belous@bk.ru</a>
+                            <p>Ответ в течение 24 часов</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Nova Tour</h3>
+                    <p>Безопасные и комфортные поездки по Европе</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Полезные ссылки</h4>
+                    <a href="#servicii">Услуги</a>
+                    <a href="#destinatii">Направления</a>
+                    <a href="#contact">Контакты</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Следите за нами</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/people/NOVA-TOUR-Transport-Moldova-Germania-Germania-Moldova/100064945602750/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/moldova_de/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/37368399903" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nova Tour. Все права защищены. Создано <a href="https://advista.marketing" target="_blank" rel="noopener noreferrer" class="advista-link">AdVista</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Nova Tour",
+      "image": "https://www.novatour.md/img/logo.png",
+      "@id": "https://www.novatour.md",
+      "url": "https://www.novatour.md",
+      "telephone": "+37368399903",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Альба-Юлия 73",
+        "addressLocality": "Кишинев",
+        "addressCountry": "MD"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.035297340895966,
+        "longitude": 28.7751250349708
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/people/NOVA-TOUR-Transport-Moldova-Germania-Germania-Moldova/100064945602750/",
+        "https://www.instagram.com/moldova_de/",
+        "https://wa.me/37368399903"
+      ]
+    }
+    </script>
+</body>
+</html> 

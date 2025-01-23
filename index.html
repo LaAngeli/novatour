@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Tour - Transport Internațional de Pasageri</title>
+    <meta name="description" content="Nova Tour oferă transport internațional de pasageri și colete din Moldova spre Europa. Călătorii sigure și confortabile cu microbuze moderne.">
+    <meta name="keywords" content="transport Moldova, transport Europa, transport pasageri, transport colete, Nova Tour">
+    <link rel="canonical" href="https://www.novatour.md/">
+    <meta name="robots" content="index, follow">
+
+    <!-- Preload pentru fonturi -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <!-- Preload pentru CSS -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Preload pentru imagini esențiale -->
+    <link rel="preload" href="img/logo.png" as="image">
+
+    <!-- Preload pentru video -->
+    <link rel="preload" href="video/video-cover.webm" as="video" type="video/webm">
+    <link rel="preload" href="video/video-cover.mp4" as="video" type="video/mp4">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Nova Tour - Transport Internațional de Pasageri">
+    <meta property="og:description" content="Nova Tour oferă transport internațional de pasageri și colete din Moldova spre Europa. Călătorii sigure și confortabile cu microbuze moderne.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.novatour.md/">
+    <meta property="og:image" content="https://www.novatour.md/img/logo.png">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nova Tour - Transport Internațional de Pasageri">
+    <meta name="twitter:description" content="Nova Tour oferă transport internațional de pasageri și colete din Moldova spre Europa. Călătorii sigure și confortabile cu microbuze moderne.">
+    <meta name="twitter:image" content="https://www.novatour.md/img/logo.png">
+
+    <!-- Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="alternate" href="https://www.novatour.md/index.html" hreflang="ro" />
+    <link rel="icon" href="https://www.novatour.md/img/new-logo.svg" type="image/svg+xml">
+    <link rel="icon" href="https://www.novatour.md/img/new-logo.ico" sizes="16x16 32x32 48x48 64x64 128x128" type="image/x-icon">
+
+    <!-- Pentru iOS Splash Screen -->
+    <link rel="apple-touch-icon" href="https://www.novatour.md/img/logo-ico.png">
+    <link rel="apple-touch-startup-image" href="https://www.novatour.md/img/logo-ico.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+</head>
+<body>
+    <!-- Meniul de contact flotant -->
+    <div class="floating-contact">
+        <a href="#" class="contact-icon phone" aria-label="Call" id="contact-phone">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="viber://chat?number=%2B37368399903" class="contact-icon viber" aria-label="Viber" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-viber"></i>
+        </a>
+        <a href="https://wa.me/37368399903" class="contact-icon whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://m.me/100064945602750" class="contact-icon messenger" aria-label="Messenger" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-messenger"></i>
+        </a>
+    </div>
+
+    <!-- Header cu navigare -->
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <picture>
+                    <source srcset="img/logo.webp" type="image/webp">
+                    <img src="img/logo.png" alt="Logo Nova Tour" class="logo-img" loading="lazy">
+                </picture>
+            </a>
+        </div>
+        <div class="language-selector">
+            <a href="index.html" class="language-link">RO</a>
+            <span>|</span>
+            <a href="index-ru.html" class="language-link">RU</a>
+        </div>
+        <button class="hamburger" aria-label="Meniu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="menu">
+            <a href="#servicii">Servicii</a>
+            <a href="#destinatii">Destinații</a>
+            <a href="#avantaje">Avantaje</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section cu Slider -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="video/video-cover.mp4" type="video/mp4">
+            <source src="video/video-cover.webm" type="video/webm">          
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Descoperă Europa cu Nova Tour</h1>
+                <p>Călătorii sigure și confortabile din Moldova spre cele mai populare destinații europene</p>
+            </div>
+        </div>
+        <div class="flags-section">
+            <div class="flags-container">
+                <div class="flag-item">
+                    <div class="flag-icon">
+                        <picture>
+                            <source srcset="img/flags/flag-moldova.webp" type="image/webp">
+                            <img src="img/flags/flag-moldova.jpg" alt="Флаг Молдовы" loading="lazy">
+                        </picture>
+                    </div>
+                    <span class="flag-name">Moldova</span>
+                </div>
+                <div class="flag-divider">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-icon">
+                        <picture>
+                            <source srcset="img/flags/czechrepublic-flag.webp" type="image/webp">
+                            <img src="img/flags/czechrepublic-flag.jpg" alt="Cehia Flag" loading="lazy">
+                        </picture>
+                    </div>
+                    <span class="flag-name">Cehia</span>
+                </div>
+                <div class="flag-divider">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-icon">
+                        <picture>
+                            <source srcset="img/flags/austria-flag.webp" type="image/webp">
+                            <img src="img/flags/austria-flag.jpg" alt="Austria Flag" loading="lazy">
+                        </picture>
+                    </div>
+                    <span class="flag-name">Austria</span>
+                </div>
+                <div class="flag-divider">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-icon">
+                        <picture>
+                            <source srcset="img/flags/germany-flag.webp" type="image/webp">
+                            <img src="img/flags/germany-flag.jpg" alt="Germania Flag" loading="lazy">
+                        </picture>
+                    </div>
+                    <span class="flag-name">Germania</span>
+                </div>
+                <div class="flag-divider">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-icon">
+                        <picture>
+                            <source srcset="img/flags/belgium-flag.webp" type="image/webp">
+                            <img src="img/flags/belgium-flag.jpg" alt="Belgia Flag" loading="lazy">
+                        </picture>
+                    </div>
+                    <span class="flag-name">Belgia</span>
+                </div>
+                <div class="flag-divider">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-icon">
+                        <picture>
+                            <source srcset="img/flags/flag-netherlands.webp" type="image/webp">
+                            <img src="img/flags/flag-netherlands.jpg" alt="Netherlands Flag" loading="lazy">
+                        </picture>
+                    </div>
+                    <span class="flag-name">Olanda</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secțiunea Servicii -->
+    <section id="servicii" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Serviciile Noastre</h2>
+                <p class="section-subtitle">Călătorii sigure și confortabile cu Nova Tour</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Transport Pasageri</h3>
+                    <p>Microbuze moderne și confortabile cu Wi-Fi gratuit și aer condiționat.</p>
+                    <ul>
+                        <li>Plecări zilnice</li>
+                        <li>De la adresă până la adresă</li>
+                        <li>Șoferi profesioniști</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3>Transport Colete</h3>
+                    <p>Livrare sigură și rapidă a coletelor la adresa destinatarului.</p>
+                    <ul>
+                        <li>Livrare garantată</li>
+                        <li>Prioritate maximă</li>
+                        <li>Prețuri accesibile</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mug-hot"></i>
+                    </div>
+                    <h3>Servicii Extra</h3>
+                    <p>Călătoriți confortabil cu beneficii gratuite.</p>
+                    <ul>
+                        <li>Gustari și băuturi calde</li>
+                        <li>Wi-Fi și prize USB pentru device-uri.</li>
+                        <li>Scaune ergonomice și raglabile</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Prețuri Accesibile</h3>
+                    <p>Oferim cele mai competitive prețuri pentru transportul internațional de pasageri și colete.</p>
+                    <ul>
+                        <li>Fără costuri ascunse</li>
+                        <li>Condiții favorabile</li>
+                        <li>Tarife transparente</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secțiunea Destinații -->
+    <section id="destinatii" class="section destinations-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Destinații</h2>
+                <p class="section-subtitle">Transport zilnic către următoarele destinații din Europa</p>
+            </div>
+            
+            <div class="destinations-wrapper">
+                <button class="nav-arrow nav-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="destinations-container">
+                    <div class="destinations-grid">
+                        <!-- Cehia -->
+                        <div class="destination-card">
+                            <div class="card-image">
+                                <picture>
+                                    <source srcset="img\destinations\cehia.webp" type="image/webp">
+                                    <img src="img\destinations\cehia.png" alt="Cehia" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="destination-info">
+                                <div class="destination-header">
+                                    <h3>Cehia</h3>
+                                </div>
+                                <div class="destination-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Plecare: În fiecare zi</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-road"></i>
+                                        <span>Durată: ~19 ore</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Distanță: ~1600 km</span>
+                                    </div>
+                                </div>
+                                <a href="viber://chat?number=%2B37368399903" class="book-button" aria-label="Viber" target="_blank" rel="noopener noreferrer">Rezervă acum</a>
+                            </div>
+                        </div>
+
+                        <!-- Austria -->
+                        <div class="destination-card">
+                            <div class="card-image">
+                                <picture>
+                                    <source srcset="img\destinations\austria.webp" type="image/webp">
+                                    <img src="img\destinations\austria.png" alt="Austria" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="destination-info">
+                                <div class="destination-header">
+                                    <h3>Austria</h3>
+                                </div>
+                                <div class="destination-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Plecare: În fiecare zi</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-road"></i>
+                                        <span>Durată: ~18 ore</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Distanță: ~1500 km</span>
+                                    </div>
+                                </div>
+                                <a href="viber://chat?number=%2B37368399903" class="book-button" aria-label="Viber" target="_blank" rel="noopener noreferrer">Rezervă acum</a>
+                            </div>
+                        </div>
+
+                        <!-- Germania -->
+                        <div class="destination-card">
+                            <div class="card-image">
+                                <picture>
+                                    <source srcset="img\destinations\germany.webp" type="image/webp">
+                                    <img src="img\destinations\germany.png" alt="Germania" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="destination-info">
+                                <div class="destination-header">
+                                    <h3>Germania</h3>
+                                </div>
+                                <div class="destination-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Plecare: În fiecare zi</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-road"></i>
+                                        <span>Durată: ~25 ore</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Distanță: ~2100 km</span>
+                                    </div>
+                                </div>
+                                <a href="viber://chat?number=%2B37368399903" class="book-button" aria-label="Viber" target="_blank" rel="noopener noreferrer">Rezervă acum</a>
+                            </div>
+                        </div>
+
+                        <!-- Belgia -->
+                        <div class="destination-card">
+                            <div class="card-image">
+                                <picture>
+                                    <source srcset="img\destinations\belgia.webp" type="image/webp">
+                                    <img src="img\destinations\belgia.png" alt="Belgia" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="destination-info">
+                                <div class="destination-header">
+                                    <h3>Belgia</h3>
+                                </div>
+                                <div class="destination-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Plecare: În fiecare zi</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-road"></i>
+                                        <span>Durată: ~27 ore</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Distanță: ~2500 km</span>
+                                    </div>
+                                </div>
+                                <a href="viber://chat?number=%2B37368399903" class="book-button" aria-label="Viber" target="_blank" rel="noopener noreferrer">Rezervă acum</a>
+                            </div>
+                        </div>
+
+                        <!-- Olanda -->
+                        <div class="destination-card">
+                            <div class="card-image">
+                                <picture>
+                                    <source srcset="img\destinations\olanda.webp" type="image/webp">
+                                    <img src="img\destinations\olanda.png" alt="Olanda" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="destination-info">
+                                <div class="destination-header">
+                                    <h3>Olanda</h3>
+                                </div>
+                                <div class="destination-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Plecare: În fiecare zi</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-road"></i>
+                                        <span>Durată: ~28 ore</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Distanță: ~2600 km</span>
+                                    </div>
+                                </div>
+                                <a href="viber://chat?number=%2B37368399903" class="book-button" aria-label="Viber" target="_blank" rel="noopener noreferrer">Rezervă acum</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destinations-controls">
+                        <div class="scroll-indicator">
+                            <div class="scroll-line">
+                                <div class="scroll-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="nav-arrow nav-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+ <!-- Secțiunea Avantaje -->
+<section id="avantaje" class="advantages-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>De ce să călătorești cu Nova Tour?</h2>
+            <p class="section-subtitle">Experiență, confort și siguranță la cel mai înalt nivel</p>
+        </div>
+        
+        <div class="advantages-grid">
+            <div class="advantage-card">
+                <div class="advantage-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Siguranță Garantată</h3>
+                <p>Vehicule moderne și șoferi profesioniști cu experiență vastă în transport internațional</p>
+            </div>
+
+            <div class="advantage-card">
+                <div class="advantage-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Program Flexibil</h3>
+                <p>Curse regulate și posibilitatea de a alege data și locația care ți se potrivește cel mai bine</p>
+            </div>
+
+            <div class="advantage-card">
+                <div class="advantage-icon">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <h3>Confort Premium</h3>
+                <p>Microbuze moderne dotate cu Wi-Fi, prize USB și scaune confortabile pentru călătorii lungi</p>
+            </div>
+
+            <div class="advantage-card">
+                <div class="advantage-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>Suport 24/7</h3>
+                <p>Echipă dedicată disponibilă non-stop pentru asistență și informații</p>
+            </div>
+
+            <div class="advantage-card">
+                <div class="advantage-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <h3>Destinații Multiple</h3>
+                <p>Rute directe către cele mai populare orașe din Europa</p>
+            </div>
+
+            <div class="advantage-card">
+                <div class="advantage-icon">
+                    <i class="fas fa-user-cog"></i>
+                </div>
+                <h3>Servicii Personalizate</h3>
+                <p>Adaptăm serviciile noastre pentru a satisface nevoile și preferințele fiecărui client.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Secțiunea Contact -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2>Contactează-ne</h2>
+                <p>Suntem disponibili 24/7 pentru asistența ta</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Partea stângă - Harta existentă -->
+                <div class="map-container">
+                    <picture>
+                        <source srcset="img\position.webp" type="image/webp">
+                        <img src="img\position.png" alt="Locatie Nova Tour" class="europe-map" loading="lazy">
+                    </picture>
+                </div>
+
+                <!-- Partea dreaptă - Contact Info -->
+                <div class="contact-info-container">
+                    <!-- Card Principal -->
+                    <div class="contact-main-card">
+                        <div class="card-header">
+                            <i class="fas fa-headset"></i>
+                            <h3>Suport Clienți 24/7</h3>
+                        </div>
+                        <div class="contact-numbers">
+                            <a href="tel:+37368399903" class="number-item primary">
+                                <span class="label">Linia Principală:</span>
+                                <span class="phone">+373 68 399 903</span>
+                            </a>
+                            <div class="number-item social-links">
+                                <span class="label">Contactează-ne prin:</span>
+                                <div class="social-icons-contact">
+                                    <a href="viber://chat?number=%2B37368399903" class="social-icon viber" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-viber"></i>
+                                    </a>
+                                    <a href="https://wa.me/37368399903" class="social-icon whatsapp" target="_blank" rel="noopener noreferrer">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </a>
+                                    <a href="https://t.me/+37368399903" class="social-icon telegram" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-telegram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carduri Secundare -->
+                    <div class="contact-cards-grid">
+                        <div class="contact-card">
+                            <i class="fas fa-clock"></i>
+                            <h4>Program de Lucru</h4>
+                            <p>Luni - Duminică</p>
+                            <p class="highlight">24/7</p>
+                        </div>
+
+                        <div class="contact-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h4>Oficiul Central</h4>
+                            <p>str.Alba-Iulia 73, Chișinău</p>
+                            <a href="https://maps.app.goo.gl/fGXh4ZrAcc2q3roe9" 
+                               class="location-btn"
+                               onclick="openGoogleMaps(event, 47.035297340895966, 28.7751250349708)">
+                                Vezi pe Hartă
+                            </a>
+                        </div>
+
+                        <div class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <h4>Email</h4>
+                            <a href="mailto:marian.belous@bk.ru" class="email-link">marian.belous@bk.ru</a>
+                            <p>Răspuns în 24 ore</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Nova Tour</h3>
+                    <p>Transport sigur și confortabil în Europa</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Link-uri Utile</h4>
+                    <a href="#servicii">Servicii</a>
+                    <a href="#destinatii">Destinații</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Urmărește-ne</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/people/NOVA-TOUR-Transport-Moldova-Germania-Germania-Moldova/100064945602750/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/moldova_de/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/37368399903" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nova Tour. Toate drepturile rezervate. Created by <a href="https://advista.marketing" target="_blank" rel="noopener noreferrer" class="advista-link">AdVista</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Nova Tour",
+      "image": "https://www.novatour.md/img/logo.png",
+      "@id": "https://www.novatour.md",
+      "url": "https://www.novatour.md",
+      "telephone": "+37368399903",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "str.Alba-Iulia 73",
+        "addressLocality": "Chișinău",
+        "addressCountry": "MD"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.035297340895966,
+        "longitude": 28.7751250349708
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/people/NOVA-TOUR-Transport-Moldova-Germania-Germania-Moldova/100064945602750/",
+        "https://www.instagram.com/moldova_de/",
+        "https://wa.me/37368399903"
+      ]
+    }
+    </script>
+</body>
+</html>
