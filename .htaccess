@@ -1,14 +1,14 @@
 RewriteEngine On
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ https://work-test-site.in/$1 [R=301,L]
-# Redirecționează /index.html către https://work-test-site.in/
+RewriteRule ^(.*)$ https://novatour.md/$1 [R=301,L]
+# Redirecționează /index.html către https://novatour.md/
 RewriteCond %{THE_REQUEST} /index\.html [NC]
-RewriteRule ^index\.html$ https://work-test-site.in/ [R=301,L]
+RewriteRule ^index\.html$ https://novatour.md/ [R=301,L]
 
 # Redirecționează /index-ru.html către /ru
 RewriteCond %{THE_REQUEST} /index-ru\.html [NC]
-RewriteRule ^index-ru\.html$ https://work-test-site.in/ru [R=301,L]
+RewriteRule ^index-ru\.html$ https://novatour.md/ru [R=301,L]
 
 # Rescrie /ru către /index-ru.html
 RewriteRule ^ru/?$ /index-ru.html [L]
