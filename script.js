@@ -1,14 +1,14 @@
 // Funcționalitate floating-contact
-document.getElementById('contact-phone').addEventListener('click', function(event) {
+/* document.getElementById('contact-phone').addEventListener('click', function(event) {
     if (/Mobi|Android/i.test(navigator.userAgent)) {
         // Dispozitiv mobil
         window.location.href = 'tel:+37368399903';
     } else {
         // PC
-        event.preventDefault(); // Previne comportamentul implicit al linkului
+        event.preventDefault(); 
         document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
     }
-});
+}); */
 
 // Funcționalitate meniu mobil - Consolidat
 document.addEventListener('DOMContentLoaded', function() {
