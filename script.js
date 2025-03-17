@@ -1,6 +1,7 @@
 // Generare link pentru href
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('a[href^="#"]');
+    const isRussianPage = document.documentElement.lang === 'ru';
 
     links.forEach(link => {
         link.addEventListener('click', function(event) {
@@ -10,7 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (targetElement) {
                 targetElement.scrollIntoView({ behavior: 'smooth' });
-                history.pushState(null, '', `/${targetId}`);
+
+                // Modifică URL-ul în funcție de limbă
+                const newUrl = isRussianPage ? `/ru/${targetId}` : `/${targetId}`;
+                history.pushState(null, '', newUrl);
             }
         });
     });
