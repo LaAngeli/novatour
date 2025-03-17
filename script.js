@@ -1,14 +1,20 @@
-// Funcționalitate floating-contact
-/* document.getElementById('contact-phone').addEventListener('click', function(event) {
-    if (/Mobi|Android/i.test(navigator.userAgent)) {
-        // Dispozitiv mobil
-        window.location.href = 'tel:+37368399903';
-    } else {
-        // PC
-        event.preventDefault(); 
-        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-    }
-}); */
+// Generare link pentru href
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('a[href^="#"]');
+
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+                history.pushState(null, '', `/${targetId}`);
+            }
+        });
+    });
+});
 
 // Funcționalitate meniu mobil - Consolidat
 document.addEventListener('DOMContentLoaded', function() {
