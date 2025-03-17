@@ -3,17 +3,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('a[href^="#"]');
     const isRussianPage = document.documentElement.lang === 'ru';
 
+    // Mapare denumiri rusești la ID-uri în latină
+    const russianToLatinIds = {
+        'услуги': 'servicii',
+        'направления': 'destinatii',
+        'преимущества': 'avantaje',
+        'контакты': 'contact'
+    };
+
     links.forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault(); 
             const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+            const actualId = isRussianPage ? russianToLatinIds[targetId] || targetId : targetId;
+            const targetElement = document.getElementById(actualId);
 
             if (targetElement) {
                 targetElement.scrollIntoView({ behavior: 'smooth' });
 
                 // Modifică URL-ul în funcție de limbă
-                const newUrl = isRussianPage ? `/ru/${targetId}` : `/${targetId}`;
+                const newUrl = isRussianPage 
+                    ? `/ru/${targetId}` 
+                    : `/${targetId}`;
                 history.pushState(null, '', newUrl);
             }
         });
