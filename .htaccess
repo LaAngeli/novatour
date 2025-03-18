@@ -106,3 +106,11 @@ AddType font/woff2 .woff2
         Header set Access-Control-Allow-Origin "*"
     </FilesMatch>
 </IfModule>
+
+# Redirecționare pentru imagini cu calea incorectă
+Redirect 301 /img\destinations\cehia.png /img/destinations/cehia.png
+Redirect 301 /img\destinations\germany.png /img/destinations/germany.png
+Redirect 301 /img\position.png /img/position.png
+Redirect 301 /img\destinations\austria.png /img/destinations/austria.png
+Redirect 301 /img\destinations\belgia.png /img/destinations/belgia.png
+Redirect 301 /img\destinations\olanda.png /img/destinations/olanda.png
