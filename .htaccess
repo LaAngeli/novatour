@@ -108,13 +108,21 @@ AddType font/woff2 .woff2
 </IfModule>
 
 # Rescriere URL-uri pentru secțiuni
-# RewriteRule ^servicii$ /index.html [L]
-# RewriteRule ^destinatii$ /index.html [L]
-# RewriteRule ^avantaje$ /index.html [L]
-# RewriteRule ^contact$ /index.html [L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /servicii\ HTTP
+RewriteRule ^servicii$ /index.html#servicii [L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /destinatii\ HTTP
+RewriteRule ^destinatii$ /index.html#destinatii [L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /avantaje\ HTTP
+RewriteRule ^avantaje$ /index.html#avantaje [L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /contact\ HTTP
+RewriteRule ^contact$ /index.html#contact [L]
 
 # Redirecționează cererile pentru versiunea rusă
-# RewriteRule ^ru/servicii$ /index-ru.html [L]
-# RewriteRule ^ru/destinatii$ /index-ru.html [L]
-# RewriteRule ^ru/avantaje$ /index-ru.html [L]
-# RewriteRule ^ru/contact$ /index-ru.html [L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /ru/servicii\ HTTP
+RewriteRule ^ru/servicii$ /index-ru.html#servicii [L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /ru/destinatii\ HTTP
+RewriteRule ^ru/destinatii$ /index-ru.html#destinatii [L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /ru/avantaje\ HTTP
+RewriteRule ^ru/avantaje$ /index-ru.html#avantaje [L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /ru/contact\ HTTP
+RewriteRule ^ru/contact$ /index-ru.html#contact [L]
