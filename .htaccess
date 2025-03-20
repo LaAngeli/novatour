@@ -106,3 +106,15 @@ AddType font/woff2 .woff2
         Header set Access-Control-Allow-Origin "*"
     </FilesMatch>
 </IfModule>
+
+# Rescriere URL-uri pentru secțiuni
+# RewriteRule ^servicii$ /index.html [L]
+# RewriteRule ^destinatii$ /index.html [L]
+# RewriteRule ^avantaje$ /index.html [L]
+# RewriteRule ^contact$ /index.html [L]
+
+# Redirecționează cererile pentru versiunea rusă
+# RewriteRule ^ru/servicii$ /index-ru.html [L]
+# RewriteRule ^ru/destinatii$ /index-ru.html [L]
+# RewriteRule ^ru/avantaje$ /index-ru.html [L]
+# RewriteRule ^ru/contact$ /index-ru.html [L]
