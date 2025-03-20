@@ -14,6 +14,27 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Navighează la secțiunea corectă dacă URL-ul conține un fragment
+    const path = window.location.pathname;
+    const sectionMap = {
+        '/servicii': '#servicii',
+        '/destinatii': '#destinatii',
+        '/avantaje': '#avantaje',
+        '/contact': '#contact',
+        '/ru/servicii': '#servicii',
+        '/ru/destinatii': '#destinatii',
+        '/ru/avantaje': '#avantaje',
+        '/ru/contact': '#contact'
+    };
+
+    const targetSection = sectionMap[path];
+    if (targetSection) {
+        const targetElement = document.querySelector(targetSection);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
 });
 
 // Funcționalitate meniu mobil - Consolidat
