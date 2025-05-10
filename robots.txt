@@ -1,7 +1,4 @@
 User-agent: *
 Disallow:
 
-User-agent: Yandex
-Disallow: /
-
 Sitemap: https://www.novatour.md/sitemap.xml 
