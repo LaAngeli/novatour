@@ -111,11 +111,18 @@
 
     <!-- Hero Section cu Slider -->
     <section class="hero">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="video/video-cover.mp4" type="video/mp4">
-            <source src="video/video-cover.webm" type="video/webm">          
-            Your browser does not support the video tag.
-        </video>
+        <div itemscope itemtype="https://schema.org/VideoObject">
+            <meta itemprop="name" content="Nova Tour - Transport Internațional de Pasageri">
+            <meta itemprop="description" content="Videoclip prezentare Nova Tour - servicii de transport internațional de pasageri din Moldova spre Europa">
+            <meta itemprop="thumbnailUrl" content="https://novatour.md/img/logo1.png">
+            <meta itemprop="uploadDate" content="2024-03-20">
+            <meta itemprop="duration" content="PT30S">
+            <video class="hero-video" autoplay muted loop playsinline itemprop="contentUrl">
+                <source src="video/video-cover.mp4" type="video/mp4">
+                <source src="video/video-cover.webm" type="video/webm">          
+                Your browser does not support the video tag.
+            </video>
+        </div>
         <div class="hero-overlay">
             <div class="hero-content">
                 <h1>Descoperă Europa cu Nova Tour</h1>
