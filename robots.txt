@@ -1,4 +1,5 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.novatour.md/sitemap.xml 
+Sitemap: https://www.novatour.md/sitemap.xml
+Host:  https://www.novatour.md
