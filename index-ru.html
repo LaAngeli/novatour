@@ -112,11 +112,18 @@
 
     <!-- Hero Section с видео -->
     <section class="hero">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="video/video-cover.mp4" type="video/mp4">
-            <source src="video/video-cover.webm" type="video/webm">          
-            Ваш браузер не поддерживает видео.
-        </video>
+        <div itemscope itemtype="https://schema.org/VideoObject">
+            <meta itemprop="name" content="Nova Tour - Международные пассажирские перевозки">
+            <meta itemprop="description" content="Видеопрезентация Nova Tour - услуги международных пассажирских перевозок из Молдовы в Европу">
+            <meta itemprop="thumbnailUrl" content="https://novatour.md/img/logo1.png">
+            <meta itemprop="uploadDate" content="2024-03-20">
+            <meta itemprop="duration" content="PT30S">
+            <video class="hero-video" autoplay muted loop playsinline itemprop="contentUrl">
+                <source src="video/video-cover.mp4" type="video/mp4">
+                <source src="video/video-cover.webm" type="video/webm">          
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
         <div class="hero-overlay">
             <div class="hero-content">
                 <h1>Путешествуйте по Европе с Nova Tour</h1>
