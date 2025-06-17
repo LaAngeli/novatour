@@ -7,4 +7,3 @@ Disallow: /.rnd
 Disallow: /config.js
 
 Sitemap: https://novatour.md/sitemap.xml
-Host:  https://novatour.md
