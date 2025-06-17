@@ -126,3 +126,32 @@ RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /ru/avantaje\ HTTP
 RewriteRule ^ru/avantaje$ /index-ru.html#avantaje [L]
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /ru/contact\ HTTP
 RewriteRule ^ru/contact$ /index-ru.html#contact [L]
+
+# Protecție pentru fișiere sensibile - Blochează accesul direct
+<Files "recaptcha_log.txt">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ".htaccess">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ".rnd">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "config.js">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Protecție pentru verify-recaptcha-v3.php - Permite doar cereri POST
+<Files "verify-recaptcha-v3.php">
+    <LimitExcept POST>
+        Order allow,deny
+        Deny from all
+    </LimitExcept>
+</Files>

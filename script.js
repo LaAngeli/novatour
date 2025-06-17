@@ -156,3 +156,171 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// reCAPTCHA v3 Functions - Folosind configurația din config.js
+document.addEventListener('DOMContentLoaded', function() {
+    // Așteaptă ca reCAPTCHA să fie încărcat
+    function waitForRecaptcha() {
+        if (typeof grecaptcha !== 'undefined' && grecaptcha.ready) {
+            console.log('reCAPTCHA loaded successfully');
+            initRecaptcha();
+        } else {
+            console.log('Waiting for reCAPTCHA to load...');
+            setTimeout(waitForRecaptcha, 200); // Măresc intervalul la 200ms
+        }
+    }
+
+    // Verifică dacă config.js este încărcat
+    function waitForConfig() {
+        if (window.NovaTourConfig && window.NovaTourConfig.recaptchaSiteKey) {
+            console.log('Config loaded, starting reCAPTCHA check');
+            waitForRecaptcha();
+        } else {
+            console.log('Waiting for config to load...');
+            setTimeout(waitForConfig, 100);
+        }
+    }
+
+    // Funcție pentru trimiterea token-ului către backend
+    async function sendTokenToBackend(token, action) {
+        try {
+            const response = await fetch(window.NovaTourConfig.recaptchaVerifyUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                body: JSON.stringify({
+                    token: token,
+                    action: action
+                })
+            });
+            
+            const result = await response.json();
+            return result;
+        } catch (error) {
+            console.error('Error sending token to backend:', error);
+            return { success: false, error: 'Network error' };
+        }
+    }
+
+    // Funcție pentru protecția butoanelor de rezervare
+    function protectBookingAction(button) {
+        grecaptcha.ready(function() {
+            grecaptcha.execute(window.NovaTourConfig.recaptchaSiteKey, {action: 'booking'})
+            .then(async function(token) {
+                console.log('reCAPTCHA token for booking:', token);
+                
+                // Trimite token-ul către backend pentru validare
+                const result = await sendTokenToBackend(token, 'booking');
+                
+                if (result.success) {
+                    console.log('Backend validation successful, score:', result.score);
+                    // Deschide Viber după validarea reCAPTCHA
+                    window.open('viber://chat?number=%2B' + window.NovaTourConfig.viberNumber.replace('+', ''), '_blank');
+                } else {
+                    console.warn('Backend validation failed:', result.error);
+                    // Fallback - deschide Viber chiar dacă validarea eșuează
+                    window.open('viber://chat?number=%2B' + window.NovaTourConfig.viberNumber.replace('+', ''), '_blank');
+                }
+            })
+            .catch(function(error) {
+                console.error('reCAPTCHA error:', error);
+                // Fallback - deschide Viber chiar dacă reCAPTCHA eșuează
+                window.open('viber://chat?number=%2B' + window.NovaTourConfig.viberNumber.replace('+', ''), '_blank');
+            });
+        });
+    }
+
+    // Funcție pentru protecția interacțiunilor de contact
+    function protectContactAction(button, originalHref) {
+        grecaptcha.ready(function() {
+            grecaptcha.execute(window.NovaTourConfig.recaptchaSiteKey, {action: 'contact'})
+            .then(async function(token) {
+                console.log('reCAPTCHA token for contact:', token);
+                
+                // Trimite token-ul către backend pentru validare
+                const result = await sendTokenToBackend(token, 'contact');
+                
+                if (result.success) {
+                    console.log('Backend validation successful, score:', result.score);
+                    // Continuă cu acțiunea originală
+                    window.open(originalHref, '_blank');
+                } else {
+                    console.warn('Backend validation failed:', result.error);
+                    // Fallback
+                    window.open(originalHref, '_blank');
+                }
+            })
+            .catch(function(error) {
+                console.error('reCAPTCHA error:', error);
+                // Fallback
+                window.open(originalHref, '_blank');
+            });
+        });
+    }
+
+    // Funcție pentru protecția generală a paginii (analytics)
+    function protectPageLoad() {
+        grecaptcha.ready(function() {
+            grecaptcha.execute(window.NovaTourConfig.recaptchaSiteKey, {action: 'page_load'})
+            .then(async function(token) {
+                console.log('reCAPTCHA token for page load:', token);
+                
+                // Trimite token-ul către backend pentru analytics
+                const result = await sendTokenToBackend(token, 'page_load');
+                
+                if (result.success) {
+                    console.log('Page load analytics sent, score:', result.score);
+                } else {
+                    console.warn('Page load analytics failed:', result.error);
+                }
+            })
+            .catch(function(error) {
+                console.error('reCAPTCHA error:', error);
+            });
+        });
+    }
+
+    // Inițializare reCAPTCHA
+    function initRecaptcha() {
+        // Protejează butoanele de rezervare
+        const bookingButtons = document.querySelectorAll('.book-button');
+        bookingButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                protectBookingAction(this);
+            });
+        });
+
+        // Protejează butoanele de contact flotante
+        const contactButtons = document.querySelectorAll('.floating-contact a, .contact-icon');
+        contactButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                if (href) {
+                    protectContactAction(this, href);
+                }
+            });
+        });
+
+        // Protejează butoanele de contact din secțiunea de contact
+        const contactSectionButtons = document.querySelectorAll('.contact-card a, .social-icon');
+        contactSectionButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                if (href) {
+                    protectContactAction(this, href);
+                }
+            });
+        });
+
+        // Execută reCAPTCHA pentru analytics la încărcarea paginii
+        setTimeout(protectPageLoad, 1000); // Delay de 1 secundă pentru a permite încărcarea completă
+    }
+
+    // Pornește verificarea pentru config și reCAPTCHA
+    waitForConfig();
+});

@@ -1,5 +1,10 @@
 User-agent: *
-Disallow:
+Disallow: /verify-recaptcha-v3.php
+Disallow: /*.php
+Disallow: /recaptcha_log.txt
+Disallow: /.htaccess
+Disallow: /.rnd
+Disallow: /config.js
 
-Sitemap: https://www.novatour.md/sitemap.xml
-Host:  https://www.novatour.md
+Sitemap: https://novatour.md/sitemap.xml
+Host:  https://novatour.md
