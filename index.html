@@ -64,11 +64,20 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            if (window.NovaTourConfig && window.NovaTourConfig.recaptchaSiteKey) {
-                const script = document.createElement('script');
-                script.src = 'https://www.google.com/recaptcha/api.js?render=' + window.NovaTourConfig.recaptchaSiteKey;
-                document.head.appendChild(script);
-            }
+            // Încarcă configurația reCAPTCHA din PHP
+            fetch('/get-recaptcha-config.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.recaptchaSiteKey) {
+                        window.NovaTourConfig.recaptchaSiteKey = data.recaptchaSiteKey;
+                        const script = document.createElement('script');
+                        script.src = 'https://www.google.com/recaptcha/api.js?render=' + data.recaptchaSiteKey;
+                        document.head.appendChild(script);
+                    }
+                })
+                .catch(error => {
+                    console.error('Eroare la încărcarea configurației reCAPTCHA:', error);
+                });
         });
     </script>
 </head>

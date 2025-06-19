@@ -1,7 +1,7 @@
 // Configurare Nova Tour
 window.NovaTourConfig = {
-    // reCAPTCHA v3 Site Key
-    recaptchaSiteKey: '6LeidmQrAAAAAIs-YOI119uSUVVLHCf1shYFOJeD',
+    // reCAPTCHA v3 Site Key - va fi încărcat din PHP
+    recaptchaSiteKey: null, // Va fi setat din PHP
     
     // URL-uri pentru API
     recaptchaVerifyUrl: '/verify-recaptcha-v3.php',
